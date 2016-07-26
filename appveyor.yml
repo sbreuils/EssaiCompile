@@ -13,7 +13,7 @@ install:
       }
   - cmd: SET PATH=C:\maven\apache-maven-3.2.5\bin;%SystemRoot%\system32;%JAVA_HOME%\bin;%PATH
   - mvn clean package assembly:directory
-  project essaiGaal
+  project: .project
 test_script:
   - mvn test
 cache:
