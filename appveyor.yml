@@ -12,8 +12,8 @@ install:
         [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\maven-bin.zip", "C:\maven")
       }
   - cmd: SET PATH=C:\maven\apache-maven-3.2.5\bin;%JAVA_HOME%\bin;%PATH
-- mvn clean package assembly:directory
+  - mvn clean package assembly:directory
 test_script:
-- mvn test
+  - mvn test
 cache:
-- C:\maven\apache-maven-3.2.5
+  - C:\maven\apache-maven-3.2.5
