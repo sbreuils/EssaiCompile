@@ -1,4 +1,4 @@
-version: 1.0.{build}
+version: {build}
 environment:
   JAVA_HOME: C:\Program Files (x86)\Java\jdk1.7.0\
 install:
@@ -12,8 +12,8 @@ install:
         [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\maven-bin.zip", "C:\maven")
       }
   - cmd: SET PATH=C:\maven\apache-maven-3.2.5\bin;%JAVA_HOME%\bin;%PATH
-  - cmd: SET MAVEN_OPTS=-XX:MaxPermSize=2g -Xmx4g
-  - cmd: SET JAVA_OPTS=-XX:MaxPermSize=2g -Xmx4gbuild_script:
 - mvn clean package assembly:directory
 test_script:
 - mvn test
+cache:
+- C:\maven\apache-maven-3.3.3
